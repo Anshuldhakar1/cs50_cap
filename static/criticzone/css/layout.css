@@ -1,0 +1,17 @@
+:root {
+    --bg_color: #e4eaff;
+}
+
+body {
+    background-color: var(--bg_color); 
+}
+
+.grid_center {
+    display: grid;
+    place-items: center;
+}
+
+.cz_anchor {
+    text-decoration: none;
+    color: inherit;
+}

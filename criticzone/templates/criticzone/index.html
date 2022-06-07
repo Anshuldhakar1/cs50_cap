@@ -1,4 +1,37 @@
 {% extends 'criticzone/layout.html' %}
+{% load static %}
 
-{% block index_block %}
-{% endblock index_block %}
+{% block css_files %}
+    <link href="{% static 'criticzone/css/index.css' %}" rel="stylesheet">
+{% endblock css_files %}
+
+{% block topbar %}
+
+    <div id="outer_div">
+        <div id="left" class="grid_center">
+            <div>
+                <a class="cz_anchor" href="{% url 'index' %}">
+                    <h1 class="grid_center">Critic Zone</h1>
+                    <img id="cz_logo" src="{% static 'media/android-chrome-512x512.png' %}" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div id="right">
+            <header id="top_bar">
+                <ul id="cz_list">
+                    <li class="cz_li">Home</li>
+                    <li class="cz_li">Login</li>
+                    <li class="cz_li">Sign Up</li>
+                </ul>
+            </header>
+            <div id="main_view">
+                <div id="main_heading">
+                    <label>See How Popular your</label> 
+                    <label>favourtie <label>Movie</label> is</label>
+                </div>
+                <div id="big_search"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock topbar %}
