@@ -1,4 +1,55 @@
 {% extends 'criticzone/layout.html' %}
+{% load static %}
+
+{% block css_files %}
+    <link href="{% static 'criticzone/css/index.css' %}" rel="stylesheet">
+{% endblock css_files %}
 
 {% block index_block %}
+
+    <div id="big-container">
+        <div id="up-container" class="grid-center">
+            <ul id="header-btn-list" class="cz-ul">
+                <li class="header-btn">Home</li>
+                <li class="header-btn">Account</li>
+                <li class="header-btn">Watchlists</li>
+                <li class="header-btn">Categories</li>
+                <li class="header-btn">Notifications</li>
+            </ul>
+        </div>
+        <div id="down-container">
+            <div id="l-container">
+                <div id="l-1-container" class="grid-center">
+                    <span id="l-site-name">Critic Zone</span>
+                </div>
+                <div id="l-2-container" class="grid-center">
+                    <span id="l-logo">
+                        <img id="cz_logo" src="{% static 'media/android-chrome-192x192.png' %}" alt="logo">
+                    </span>
+                </div>
+            </div>
+            <div id="r-container">
+                <div id="r-1-conatiner">
+                    <span id="r-1-1-line">
+                        See How Popular your
+                    </span>
+                    <div id="r-1-2-line">
+                        favourite 
+                        <ul id="rot-cat" class="cz-ul">
+                            <li class="rolling-cat">Movie</li>
+                            <li class="rolling-cat">Game</li>
+                            <li class="rolling-cat">Book</li>
+                        </ul> 
+                        compares
+                    </div>
+                </div>
+                <div id="r-2-container">
+                    <span id="search_logo">
+                        <img src="{% static 'media/search_icon.svg' %}" alt="search_icon">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock index_block %}
